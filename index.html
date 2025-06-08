@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="header_container">
+        <div class="header_content">
+            <div class="profile_photo">
+                <img src="images/pic.jpeg" alt="Ma photo de profil">
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:ton.email@example.com">alaejennine33@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+212600000000">+33 7 66 38 43 63</a></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about_section">
+        <h2>About me</h2>
+        <p>
+            My name is Alaa Jennine, I am 21 years old. After completing two years of intensive preparatory classes in Mathematics and Physics (MPSI/MP*), I joined ENSIMAG, where I am currently in my third year, enrolled in the MOSIG program with a specialization in Cloud Computing and Data Infrastructure. I am pursuing a dual degree — an engineering diploma and a master's degree — which I will obtain in 2026.
+
+Curious, rigorous, and passionate about distributed systems and software development, I am eager to contribute to innovative projects and to deepen my expertise in cloud architectures, data infrastructure, and modern software engineering. 
+
+        </p>
+    </section>
+
+    <section class="projects_section">
+        <h2>My Projects</h2>
+        
+        <div class="project">
+            <h3>Portail Apps</h3>
+            <p>A web platform that presents all digital applications used by the Ministry of Agriculture. It allows users to view, add, and manage platforms dynamically for easy access and organization.</p>
+            <a href="https://github.com/alaajee/portail_apps" target="_blank">View on GitHub</a>
+          </div>
+          
+    
+        <div class="project">
+            <h3>JPEG Image Encoder in C</h3>
+            <p>A low-level encoder that converts raw PPM images into JPEG format using DCT and Huffman coding. Developed in C with a focus on memory optimization and performance.</p>
+            <a href="https://github.com/alaajee/encodeur-ppmtojpeg" target="_blank">View on GitHub</a>
+        </div>
+    
+        <div class="project">
+            <h3>Deca Compiler with ARM Extension</h3>
+            <p>Compiler implementation for a custom language, generating ARM assembly. Built in Java as part of a team, with strong focus on parsing, semantic analysis, and code generation.</p>
+            <a href="https://github.com/alaajee/Compilateur-Deca" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+    <section class="latest_news_section">
+        <h2>Latest News</h2>
+        <ul>
+          <li>
+            <span class="news-date">June 2025</span> — Attended an insightful talk by Willy Zwaenepoel on “Software for Fast Storage Hardware,” focusing on redesigning software to fully utilize ultra-fast storage devices like Optane with KVell and KVell+ systems.
+          </li>
+          <li>
+            <span class="news-date">May 2025 - Present</span> — Intern at LIG Team Krakos, working on a Linux kernel module.
+          </li>
+        </ul>
+      </section>
+    
+      <section class="contact_section">
+        <h2>Contact Me</h2>
+        <form class="contact_form" action="https://formspree.io/f/mzzgezwr" method="POST" >
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+      
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required />
+      
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+      
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      
+    <section class="github_section">
+        <h2>Check Out My GitHub</h2>
+        <p>You can explore all my projects and contributions on my GitHub profile.</p>
+        <a href="https://github.com/alaajee" target="_blank" class="github_button">
+            <i class="fab fa-github"></i> Visit My GitHub
+        </a>
+    </section>
+    
+    
+    
+
+    
+</body>
+</html>
