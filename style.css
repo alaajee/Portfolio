@@ -51,6 +51,16 @@ body {
     margin-right: 8px;
 }
 
+.name {
+    color: black;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 600px;
+}
+
+
 .about_section {
     background-color: #ffffff;
     padding: 40px 20px;
