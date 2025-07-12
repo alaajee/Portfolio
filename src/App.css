@@ -1,0 +1,314 @@
+.App {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #486895, #9a9fc5, #697bb3, #4abfa4);
+  animation: gradientMove 12s ease infinite;
+  background-size: 700% 700% ;
+  background-repeat: no-repeat;
+
+}
+ @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .App-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* espace entre logo et les cases */
+    align-items: center;
+    padding: 20px;
+    height: 5%;
+    color: rgb(102, 131, 168);
+    
+  }
+  
+  .App-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ecc71; /* vert lumineux */
+    text-shadow: 0 0 10px #2ecc71, 0 0 20px #27ae60;
+    animation: glow 2s ease-in-out infinite alternate;
+    cursor: default;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #2ecc71, 0 0 10px #27ae60;
+    }
+    to {
+      text-shadow: 0 0 20px #2ecc71, 0 0 40px #27ae60;
+    }
+  }
+  
+  
+  .Nav-boxes {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .box1 {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    margin-left: 50%;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .box1:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+   
+  .box2 {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 1%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .box2:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+   
+  .box3 {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .box3:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+
+  .App-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    gap: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: 50px auto;
+    max-width: 1000px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    color: white;
+    animation: dropIn 2s ease forwards;
+    opacity: 0;
+    transform: translateY(-200px);
+    
+    
+  }
+  
+  .Profile-picture img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: dropIn 1.5s ease forwards;
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  
+  .Profile-description {
+    max-width: 500px;
+    animation: dropIn 1.5s ease forwards;
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  
+  .Profile-description h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .Profile-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+  
+
+ 
+
+  .Passion-bubbles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+    animation: fadeIn 1.5s ease-in;
+   
+  }
+  
+  .bubble {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #6ee7b7, #3b82f6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: dropIn 2s ease forwards;
+    opacity: 0;
+    transform: translateY(-200px);
+    animation-delay: 1s;
+  }
+  
+  .bubble:nth-child(2) {
+    animation-delay: 1.3s;
+  }
+  
+  .bubble:nth-child(3) {
+    animation-delay: 1.6s;
+  }
+  
+  @keyframes dropIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+  
+
+  .footer {
+  background-color: #3f4f69; /* dark slate */
+  color: #cbd5e1;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.footer-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #0ea5e9;
+}
+
+/* === Mobile styles : écrans max 600px === */
+@media (max-width: 600px) {
+  .App {
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(-45deg, #486895, #9a9fc5, #697bb3, #4abfa4);
+    animation: gradientMove 12s ease infinite;
+    background-size: 700% 700% ;
+    background-repeat: no-repeat;
+  
+  }
+
+  .App-header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .App-logo {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .Nav-boxes {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 0 !important;
+  }
+  
+  /* Centrer les cases */
+  .box1, .box2, .box3 {
+    margin-left: 0 !important;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .App-content {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+    max-width: 90vw;
+    margin: 30px auto;
+  }
+  
+  .Profile-picture img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .Profile-description {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .Profile-description h2 {
+    font-size: 1.5rem;
+  }
+  
+  .Profile-description p {
+    font-size: 1rem;
+  }
+
+  .Passion-bubbles {
+    flex-direction: flex;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .bubble {
+    width: 120px;
+    height: 120px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+}
