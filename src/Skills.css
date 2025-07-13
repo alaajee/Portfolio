@@ -1,0 +1,104 @@
+/* Skills.css */
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+.Skills-page {
+    position: relative;
+    
+    height: 70vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+  }
+  
+  .skill-bubble {
+    position: relative;
+    background-color: #1e293b;
+    color: white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 50%;
+    margin: 1rem;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: float 4s ease-in-out infinite;
+
+  }
+  
+  .skill-bubble:hover {
+    transform: scale(1.1);
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    background-color: white;
+    color: #1e293b;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  
+  .skill-bubble:hover .tooltip {
+    opacity: 1;
+    
+  }
+  
+  /* Optionnel : Répartition visuelle aléatoire */
+    .skill1 { animation-delay: 0s; }
+    .skill2 { animation-delay: 1s; }
+    .skill3 { animation-delay: 2s; }
+    .skill4 { animation-delay: 3s; }
+
+    .current-skill-banner {
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1e293b;
+        color: #fff;
+        padding: 0.8rem 1.5rem;
+        border-radius: 12px;
+        font-size: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        font-weight: 500;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+        to { opacity: 1; transform: translateX(-50%) translateY(0); }
+      }
+      
