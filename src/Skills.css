@@ -1,4 +1,39 @@
 /* Skills.css */
+@media (max-width: 768px) {
+  .Skills-page {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .skill-bubble {
+    width: 130px;
+    height: 130px;
+    font-size: 0.85rem;
+    margin: 0.5rem;
+  }
+
+  /* Les tooltips seront toujours visibles sur mobile */
+  .skill-bubble .tooltip {
+    position: static;
+    transform: none;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1e293b;
+    box-shadow: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    pointer-events: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .skill-bubble:hover .tooltip {
+    opacity: 1; /* inutile mais garde la cohérence */
+  }
+}
+
 @keyframes float {
     0% {
       transform: translateY(0px);
