@@ -1,0 +1,41 @@
+.study-item1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  animation: floaat 4s ease-in-out ;
+}
+
+.study-item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    animation: floaat 6s ease-in-out ;
+  }
+  
+
+.study-item3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    animation: floaat 8s ease-in-out infinite;
+  }
+  
+  @keyframes floaat {
+    from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+        to { opacity: 1; transform: translateX(0%) translateY(0); } 
+  }
