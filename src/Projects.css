@@ -1,0 +1,78 @@
+.project-item1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  animation: floaat 4s ease-in-out;
+}
+
+.project-item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    animation: floaat 4s ease-in-out;
+}
+
+.project-item3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    animation: floaat 4s ease-in-out;
+  }
+
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background-color: #bce1e7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #000; /* readable text color */
+    animation: float 4s ease-in-out infinite;
+  }
+  .github-link img {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .github-text {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #000; /* change color if needed */
+  }
+  .github-link:hover {
+    background-color: #31636f;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  
+  /* Optional floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .github-link img {
+    height: 20px;
+  }
+  

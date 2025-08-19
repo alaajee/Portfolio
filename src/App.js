@@ -8,6 +8,7 @@ import picture from './pic.jpeg';
 import './App.css';
 import Skills from './Skills';
 import Studies from './Studies'; 
+import Projects from './Projects';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         </div>
        
         <Link to="/skills" className="box1">Skills</Link>
-        <Link to="/" className="box2">Projects</Link>
+        <Link to="/projects" className="box2">Projects</Link>
         <Link to="/studies" className="box3">Studies</Link>
         
       </header>
@@ -63,6 +64,7 @@ function App() {
 
           <Route path="/skills" element={<Skills />} />
           <Route path="/studies" element={<Studies />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
      
 
