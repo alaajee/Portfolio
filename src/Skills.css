@@ -46,7 +46,15 @@
       transform: translateY(0px);
     }
   }
+  .Skills {
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(-45deg, #486895, #9a9fc5, #697bb3, #4abfa4);
+    animation: gradientMove 12s ease infinite;
+    background-size: 700% 700% ;
+    background-repeat: no-repeat;
   
+  }
 .Skills-page {
     position: relative;
     

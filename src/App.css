@@ -1,11 +1,12 @@
 .App {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto; 
   background: linear-gradient(-45deg, #486895, #9a9fc5, #697bb3, #4abfa4);
   animation: gradientMove 12s ease infinite;
   background-size: 700% 700% ;
   background-repeat: no-repeat;
-
+  background-attachment: fixed; 
 }
  @keyframes gradientMove {
     0% { background-position: 0% 50%; }
@@ -41,14 +42,137 @@
       text-shadow: 0 0 20px #2ecc71, 0 0 40px #27ae60;
     }
   }
-  
+  /* Ajoutez ces styles à votre App.css existant */
+
+.Hamburger-menu {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Les trois tirets (hamburger lines) */
+.Hamburger-menu::before,
+.Hamburger-menu::after,
+.Hamburger-menu {
+  position: relative;
+}
+
+.Hamburger-menu::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  top: 8px;
+  transition: all 0.3s ease;
+}
+
+.Hamburger-menu::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Le tiret du milieu */
+.Hamburger-menu .middle-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animation des tirets au hover */
+.Hamburger-menu:hover::before {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+/* .Hamburger-menu:hover .middle-line {
+  opacity: 0;
+} */
+
+.Hamburger-menu:hover::after {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Menu dropdown caché par défaut */
+.box1, .box2, .box3 , .box4 {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 120px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Positionnement des éléments du menu */
+.box1 {
+  top: 45px;
+  animation-delay: 0.1s;
+}
+
+.box2 {
+  top: 90px;
+  animation-delay: 0.2s;
+}
+
+.box3 {
+  top: 135px;
+  animation-delay: 0.3s;
+}
+
+.box4 {
+  top: 180px;
+  animation-delay: 0.3s;
+}
+/* Affichage du menu au hover */
+.Hamburger-menu:hover .box1,
+.Hamburger-menu:hover .box2,
+.Hamburger-menu:hover .box3,
+.Hamburger-menu:hover .box4 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Effet hover sur les éléments du menu */
+.box1:hover, .box2:hover, .box3:hover , .box4:hover{
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #007bff;
+  transform: translateY(0) scale(1.05);
+}
   
   .Nav-boxes {
     display: flex;
     gap: 20px;
   }
   
-  .box1 {
+  /* .box1 {
     background-color: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px 20px;
@@ -95,7 +219,7 @@
   
   .box3:hover {
     background-color: rgba(255, 255, 255, 0.3);
-  }
+  } */
 
 
   .App-content {
@@ -187,6 +311,7 @@
     animation-delay: 1.6s;
   }
   
+
   @keyframes dropIn {
     to {
       opacity: 1;
@@ -199,7 +324,183 @@
     to { opacity: 1 }
   }
   
+ /* 🎨 STYLES AVANCÉS POUR LES SECTIONS */
 
+/* Styles de base pour toutes les sections */
+.Web-development-section,
+.Kernel-development-section, 
+.Cloud-DevOps-section {
+  animation: fadeIn 1.5s ease-in;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)) padding-box,
+              linear-gradient(45deg, #007bff, #00d4aa) border-box;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  margin: 40px auto;
+  text-align: center;
+  color: white;
+  padding: 40px 30px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  animation: dropIn 10s ease forwards;
+}
+
+/* Effet hover sur les sections */
+.Web-development-section:hover,
+.Kernel-development-section:hover,
+.Cloud-DevOps-section:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+  backdrop-filter: blur(20px);
+  
+}
+
+/* 🌟 STYLES POUR LES TITRES H2 */
+.Web-development-section h2,
+.Kernel-development-section h2,
+.Cloud-DevOps-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  
+  /* Effet gradient sur le texte */
+  background: linear-gradient(135deg, #ffffff, #e0e7ff, #bfdbfe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Animation subtile */
+  animation: titleGlow 3s ease-in-out infinite alternate;
+  
+  /* Effet de profondeur */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+/* Animation pour les titres */
+@keyframes titleGlow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+    transform: scale(1);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
+    transform: scale(1.02);
+  }
+}
+
+/* 🔤 STYLES POUR LES PARAGRAPHES */
+.Web-development-section p,
+.Kernel-development-section p,
+.Cloud-DevOps-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #f0f9ff;
+  margin: 0;
+  position: relative;
+  
+  /* Espacement des mots pour plus de lisibilité */
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+  
+  /* Effet de transparence subtile */
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+/* Effet hover sur les paragraphes */
+.Web-development-section:hover p,
+.Kernel-development-section:hover p,
+.Cloud-DevOps-section:hover p {
+  opacity: 1;
+  transform: translateY(-2px);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* 🎨 STYLES SPÉCIFIQUES PAR SECTION */
+
+/* Web Development - Couleurs bleues */
+.Web-development-section {
+  background: linear-gradient(rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.1)) padding-box,
+              linear-gradient(45deg, #6080b3, #06b6d4) border-box;
+}
+
+.Web-development-section h2::before {
+  content: '🌐 ';
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Kernel Development - Couleurs vertes */
+.Kernel-development-section {
+  background: linear-gradient(rgba(34, 197, 94, 0.1), rgba(110, 231, 183, 0.1)) padding-box,
+              linear-gradient(45deg,#6080b3, #06b6d4) border-box;
+  
+}
+
+.Kernel-development-section h2::before {
+  content: '⚙️ ';
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Cloud DevOps - Couleurs oranges/rouges */
+.Cloud-DevOps-section {
+  background: linear-gradient(rgba(251, 146, 60, 0.1), rgba(249, 115, 22, 0.1)) padding-box,
+              linear-gradient(45deg,#6080b3, #06b6d4) border-box;
+}
+
+.Cloud-DevOps-section h2::before {
+  content: '☁️ ';
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* 🔥 EFFET DE PARTICULES ANIMÉES (optionnel) */
+.Web-development-section::before,
+.Kernel-development-section::before,
+.Cloud-DevOps-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"><animate attributeName="opacity" values="0.1;0.3;0.1" dur="2s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1" fill="white" opacity="0.1"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite"/></circle><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"><animate attributeName="opacity" values="0.1;0.2;0.1" dur="2.5s" repeatCount="indefinite"/></circle></svg>');
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* 📱 RESPONSIVE MOBILE */
+@media (max-width: 600px) {
+  .Web-development-section,
+  .Kernel-development-section,
+  .Cloud-DevOps-section {
+    max-width: 90vw;
+    padding: 25px 20px;
+    margin: 30px auto;
+  }
+  
+  .Web-development-section h2,
+  .Kernel-development-section h2,
+  .Cloud-DevOps-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .Web-development-section p,
+  .Kernel-development-section p,
+  .Cloud-DevOps-section p {
+    font-size: 1rem;
+  }
+}
   .footer {
   background-color: #3f4f69; /* dark slate */
   color: #cbd5e1;
@@ -225,6 +526,7 @@
 .footer-links a:hover {
   color: #0ea5e9;
 }
+
 
 /* === Mobile styles : écrans max 600px === */
 @media (max-width: 600px) {

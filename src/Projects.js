@@ -31,9 +31,6 @@ function Projects() {
 
             </div>
 
-            <div className="return-button">
-                <a href="/" className="return-link">Return to Home</a>
-            </div>
         </div>
     )
 }
