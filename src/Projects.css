@@ -1,78 +1,138 @@
-.project-item1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  animation: floaat 4s ease-in-out;
+.project-item1,
+.project-item2,
+.project-item3,
+.project-item4,
+.project-item5 {
+  border: 1px solid #b0daee;
+  border-radius: 3%;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: inset 0 0 10px #b0daee;
+  padding-bottom: 20px;
+  
+  /* Inclinaison légère du cadre */
+  /* transform: rotate(2deg); */
+  margin-bottom: 40px;
 }
 
-.project-item2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    animation: floaat 4s ease-in-out;
+
+.project-item1 img,
+.project-item4 video{
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.project-item3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    border: 1px solid #ccc;
+.ppm {
+  bottom: auto;
+  border: 2px solid #b0daee;
+  
+  /* Styles de bouton */
+  background-color: #b0daee;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  
+  /* Animation */
+  transition: all 0.3s ease;
+}
+
+.ppm:hover {
+  background-color: #8cc8e6;
+  border-color: #8cc8e6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(176, 218, 238, 0.3);
+}
+
+.ppm:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(176, 218, 238, 0.2);
+}
+
+.All-projects {
+  text-align: center;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, 
+    rgba(176, 218, 238, 0.05) 0%, 
+    rgba(255, 255, 255, 0.1) 100%);
+  border: 1px solid rgba(176, 218, 238, 0.3);
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(176, 218, 238, 0.15);
+  font-size: 1.1em;
+  color: #2c5d75;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.All-projects:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(176, 218, 238, 0.25);
+  border-color: rgba(176, 218, 238, 0.5);
+}
+
+/* Style amélioré pour le bouton GitHub */
+.All-projects .ppm {
+  background: linear-gradient(135deg, #b0daee 0%, #8cc8e6 100%);
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid #b0daee;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(176, 218, 238, 0.3);
+}
+
+.All-projects .ppm:hover {
+  background: linear-gradient(135deg, #8cc8e6 0%, #6bb8d9 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(176, 218, 238, 0.4);
+  border-color: #6bb8d9;
+}
+
+.All-projects .ppm:active {
+  transform: translateY(0) scale(1.02);
+  box-shadow: 0 3px 10px rgba(176, 218, 238, 0.3);
+}
+
+/* Effet subtil avec icône GitHub optionnelle */
+.All-projects .ppm::before {
+  content: "⭐ ";
+  margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .All-projects {
+    margin: 30px 20px;
     padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    animation: floaat 4s ease-in-out;
+    font-size: 1em;
   }
-
-  .github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    background-color: #bce1e7;
-    border: none;
+  
+  .All-projects .ppm {
     padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;  
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    color: #000; /* readable text color */
-    animation: float 4s ease-in-out infinite;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .github-link img {
-    height: 24px;
-    width: 24px;
-  }
-  
-  .github-text {
-    margin-left: 10px;
-    font-size: 1rem;
-    color: #000; /* change color if needed */
-  }
-  .github-link:hover {
-    background-color: #31636f;
-    color: #fff;
-    transform: translateY(-3px);
-  }
-  
-  /* Optional floating animation */
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-  }
-  
-  .github-link img {
-    height: 20px;
-  }
-  
+}

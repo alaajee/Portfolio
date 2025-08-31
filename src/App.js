@@ -67,6 +67,7 @@ function App() {
                 <p>Docker, AWS</p>
               </div>
 
+             
               <footer className="footer">
                 <p>© 2025 Alaa Jennine — All rights reserved.</p>
                 <div className="footer-links">

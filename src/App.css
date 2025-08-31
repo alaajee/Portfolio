@@ -347,7 +347,9 @@
   overflow: hidden;
   transition: all 0.4s ease;
   cursor: pointer;
-  animation: dropIn 10s ease forwards;
+  animation: dropIn 5s ease forwards;
+
+  transform: translateY(-200px);
 }
 
 /* Effet hover sur les sections */
