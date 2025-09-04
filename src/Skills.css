@@ -7,8 +7,8 @@
   }
 
   .skill-bubble {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: auto;
     font-size: 0.85rem;
     margin: 0.5rem;
   }
