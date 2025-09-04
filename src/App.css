@@ -562,7 +562,7 @@
   }
   
   /* Centrer les cases */
-  .box1, .box2, .box3 {
+  .box1, .box2, .box3 , .box4 {
     margin-left: 0 !important;
     padding: 8px 15px;
     font-size: 0.9rem;
