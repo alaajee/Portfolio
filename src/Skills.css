@@ -14,7 +14,7 @@
   }
   
 
-  /* Les tooltips seront toujours visibles sur mobile */
+  /* Les tooltips seront toujours visibles sur mobile
   .skill-bubble .tooltip {
     position: static;
     transform: none;
@@ -32,7 +32,7 @@
 
   .skill-bubble:hover .tooltip {
     opacity: 1; /* inutile mais garde la cohérence */
-  }
+  
 }
 
 @keyframes float {
