@@ -67,7 +67,37 @@ function App() {
                 <p>Docker, AWS</p>
               </div>
 
-             
+              <form className="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="38a8118d-2652-4e0e-a2a8-c0554fa184aa" />
+
+              <h2>Contact Me</h2>
+
+              <input
+                type="text"
+                name="name"
+                className="name"
+                placeholder="Your Name"
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                className="email"
+                placeholder="Your Email"
+                required
+              />
+
+              <textarea
+                name="message"
+                className="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+
+              <button type="submit">Send</button>
+            </form>
+
               <footer className="footer">
                 <p>© 2025 Alaa Jennine — All rights reserved.</p>
                 <div className="footer-links">

@@ -432,7 +432,7 @@
 /* Web Development - Couleurs bleues */
 .Web-development-section {
   background: linear-gradient(rgba(59, 130, 246, 0.1), rgba(147, 197, 253, 0.1)) padding-box,
-              linear-gradient(45deg, #6080b3, #06b6d4) border-box;
+              linear-gradient(45deg, #9cb2d5, #6ea0b6) border-box;
 }
 
 .Web-development-section h2::before {
@@ -444,7 +444,7 @@
 /* Kernel Development - Couleurs vertes */
 .Kernel-development-section {
   background: linear-gradient(rgba(34, 197, 94, 0.1), rgba(110, 231, 183, 0.1)) padding-box,
-              linear-gradient(45deg,#6080b3, #06b6d4) border-box;
+              linear-gradient(45deg, #9cb2d5, #6ea0b6) border-box;
   
 }
 
@@ -457,7 +457,7 @@
 /* Cloud DevOps - Couleurs oranges/rouges */
 .Cloud-DevOps-section {
   background: linear-gradient(rgba(251, 146, 60, 0.1), rgba(249, 115, 22, 0.1)) padding-box,
-              linear-gradient(45deg,#6080b3, #06b6d4) border-box;
+              linear-gradient(45deg, #9cb2d5, #6ea0b6) border-box;
 }
 
 .Cloud-DevOps-section h2::before {
@@ -615,4 +615,45 @@
   .footer-links {
     gap: 15px;
   }
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    max-width: 500px;
+    margin: 40px auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    animation: dropIn 2s ease forwards;
+    opacity: 0;
+    transform: translateY(-200px);
+}
+
+.name {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.email {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.message {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
+  resize: vertical;
 }
