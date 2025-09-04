@@ -27,7 +27,7 @@
     margin-top: 0.5rem;
     pointer-events: auto;
     text-align: center;
-    width: 100%;
+
   }
 
   .skill-bubble:hover .tooltip {
